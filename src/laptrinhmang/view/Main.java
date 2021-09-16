@@ -19,7 +19,7 @@ public class Main extends javax.swing.JFrame {
         FormDepartment f1 = new FormDepartment();
         FormEmployee f2 = new FormEmployee();
 //        FormSalaryGrade f3 = new FormSalaryGrade();
-        FormTimekeeper f4 = new FormTimekeeper();
+        FormTimekeeperr f4 = new FormTimekeeperr();
         
         jTabbedPane1.add("Department", f1);
         jTabbedPane1.add("Employee", f2);

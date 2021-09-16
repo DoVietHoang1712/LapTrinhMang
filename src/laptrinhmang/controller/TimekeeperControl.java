@@ -11,17 +11,17 @@ import java.sql.SQLException;
 import laptrinhmang.controller.dao.TimekeeperDAO;
 import laptrinhmang.controller.utils.MySQLConnUtils;
 import laptrinhmang.model.Timekeeper;
-import laptrinhmang.view.FormTimekeeper;
+import laptrinhmang.view.FormTimekeeperr;
 
 /**
  *
  * @author hoang
  */
 public class TimekeeperControl {
-    FormTimekeeper view;
+    FormTimekeeperr view;
     TimekeeperDAO dao;
     
-    public TimekeeperControl(FormTimekeeper view) {
+    public TimekeeperControl(FormTimekeeperr view) {
         try {
             dao = new TimekeeperDAO(MySQLConnUtils.getMySQLConnection());
             this.view = view;
