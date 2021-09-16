@@ -26,6 +26,7 @@ public class EmployeeControl {
         try {
             dao = new EmployeeDAO(MySQLConnUtils.getMySQLConnection());
             this.view = view;
+            view.addEmployeeListener(new EmployeeListener());
 
         } catch (ClassNotFoundException | SQLException e) {
             // TODO Auto-generated catch block

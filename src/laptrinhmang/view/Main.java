@@ -19,7 +19,7 @@ public class Main extends javax.swing.JFrame {
         FormDepartment f1 = new FormDepartment();
         FormEmployee f2 = new FormEmployee();
 //        FormSalaryGrade f3 = new FormSalaryGrade();
-        FormTimekeeperr f4 = new FormTimekeeperr();
+        FormTimekeeper f4 = new FormTimekeeper();
         
         jTabbedPane1.add("Department", f1);
         jTabbedPane1.add("Employee", f2);
@@ -46,11 +46,11 @@ public class Main extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 759, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 64, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 564, Short.MAX_VALUE)
         );
 
         pack();
