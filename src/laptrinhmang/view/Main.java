@@ -18,12 +18,12 @@ public class Main extends javax.swing.JFrame {
         initComponents();
         FormDepartment f1 = new FormDepartment();
         FormEmployee f2 = new FormEmployee();
-        FormSalaryGrade f3 = new FormSalaryGrade();
+//        FormSalaryGrade f3 = new FormSalaryGrade();
         FormTimekeeper f4 = new FormTimekeeper();
         
         jTabbedPane1.add("Department", f1);
         jTabbedPane1.add("Employee", f2);
-        jTabbedPane1.add("SalaryGrade", f3);
+//        jTabbedPane1.add("SalaryGrade", f3);
         jTabbedPane1.add("Timekeeper", f4);
     }
 
@@ -81,6 +81,7 @@ public class Main extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
