@@ -113,10 +113,11 @@ public class DepartmentDAO extends IDAO<Department> {
 
     @Override
     public int update(Department d) {
-                String sql ="UPDATE DEPARTMENT set " +"DEPT_ID =?,"
+                String sql ="UPDATE DEPARTMENT set " 
                 + "DEPT_NAME =?,"
                 + "DEPT_NO =?,"
-                + "LOCATION =?," ;
+                + "LOCATION =?,"
+                + "Where DEPT_ID =?";
         try {
             this.preStatement = this.conn.prepareStatement(sql);
             this.preStatement.setInt(1, d.getDeptId());

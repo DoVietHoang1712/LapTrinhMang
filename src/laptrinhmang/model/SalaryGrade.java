@@ -54,4 +54,10 @@ public class SalaryGrade implements Serializable {
     public void setLowSalary(float lowSalary) {
         this.lowSalary = lowSalary;
     }
+    
+    public Object[] toObject() {
+        return new Object[] {
+            grade, highSalary, lowSalary
+        };
+    }
 }

@@ -8,25 +8,24 @@ package laptrinhmang.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
-import laptrinhmang.controller.dao.DepartmentDAO;
+import laptrinhmang.controller.dao.TimekeeperDAO;
 import laptrinhmang.controller.utils.MySQLConnUtils;
-import laptrinhmang.model.Department;
-import laptrinhmang.view.FormDepartment;
+import laptrinhmang.model.Timekeeper;
+import laptrinhmang.view.FormTimekeeper;
 
 /**
  *
  * @author hoang
  */
-public class DepartmentControl {
-    FormDepartment view;
-    DepartmentDAO dao;
+public class TimekeeperControl {
+    FormTimekeeper view;
+    TimekeeperDAO dao;
     
-    public DepartmentControl(FormDepartment view) {
+    public TimekeeperControl(FormTimekeeper view) {
         try {
-            dao = new DepartmentDAO(MySQLConnUtils.getMySQLConnection());
+            dao = new TimekeeperDAO(MySQLConnUtils.getMySQLConnection());
             this.view = view;
-            view.addDepartmentListener(new DepartmentListener());
-
+            view.addTimekeeperListener(new TimekeeperListener());
         } catch (ClassNotFoundException | SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -35,7 +34,7 @@ public class DepartmentControl {
         }
     }
     
-    class DepartmentListener implements ActionListener {
+    class TimekeeperListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -43,13 +42,13 @@ public class DepartmentControl {
                 
                 String command = e.getActionCommand();
                 if (command.equalsIgnoreCase("Them")) {
-                    Department emp = view.input();
+                    Timekeeper emp = view.input();
                     dao.insert(emp);
                 } else if (command.equalsIgnoreCase("Sua")) {
-                    Department emp = view.input();
+                    Timekeeper emp = view.input();
                     dao.update(emp);
                 } else if (command.equalsIgnoreCase("Lay")) {
-                    Department[] emps = dao.selectAll();
+                    Timekeeper[] emps = dao.selectAll();
                     view.fillTable(emps);
                 }
             } catch (Exception ex) {
@@ -58,11 +57,11 @@ public class DepartmentControl {
         }
     }
 
-    private Department[] displayAll() {
+    private Timekeeper[] displayAll() {
         return this.dao.selectAll();
     }
 
-    private Department[] displayByName(String name) {
+    private Timekeeper[] displayByName(String name) {
         return this.dao.selectByName(name);
     }
 
